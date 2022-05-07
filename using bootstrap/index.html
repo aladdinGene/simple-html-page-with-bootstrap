@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Current Scoring</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div class="container-fluid">
+	<p class="header-title">Pre-Mitigated Scoring</p>
+	<div>
+		<button class="btn btn-danger">High&nbsp;:&nbsp;25</button>
+		<button class="btn btn-secondary">Impact History</button>
+	</div>
+	<p class="current-score-txt">Current Scoring</p>
+	<div>
+		<label class="header-label">EMV ($)</label>
+		<input  class="form-control" type="number" value="0" />
+	</div>
+	<div class="container-fluid">
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">Likelyhood: </p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="likelyhood-btnradio" id="likelyhood-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="likelyhood-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="likelyhood-btnradio" id="likelyhood-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-dark" for="likelyhood-btnradio2">Rare</label>
+
+					<input type="radio" class="btn-check" name="likelyhood-btnradio" id="likelyhood-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-dark" for="likelyhood-btnradio3">Unlikely</label>
+
+					<input type="radio" class="btn-check" name="likelyhood-btnradio" id="likelyhood-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-dark" for="likelyhood-btnradio4">Possible</label>
+
+					<input type="radio" class="btn-check" name="likelyhood-btnradio" id="likelyhood-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-dark" for="likelyhood-btnradio5">Likely</label>
+
+					<input type="radio" class="btn-check" name="likelyhood-btnradio" id="likelyhood-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-dark" for="likelyhood-btnradio6">Almost Certain</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+					</div>
+					<div class="col-md-7">
+						<div class="row text-center">
+							<div class="col">Min</div>
+							<div class="col">Expected</div>
+							<div class="col">Max</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<div class="row">
+							<p class="col">Financial-Cost</p>
+							<select class="form-select col">
+								<option>AUD($)</option>
+								<option>USD($)</option>
+								<option>EUR($)</option>
+								<option>GBP($)</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="financial-cost-btnradio" id="financial-cost-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="financial-cost-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="financial-cost-btnradio" id="financial-cost-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="financial-cost-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="financial-cost-btnradio" id="financial-cost-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="financial-cost-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="financial-cost-btnradio" id="financial-cost-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="financial-cost-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="financial-cost-btnradio" id="financial-cost-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="financial-cost-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="financial-cost-btnradio" id="financial-cost-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="financial-cost-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<div class="row">
+							<p class="col">Financial-LD</p>
+							<select class="form-select col">
+								<option>AUD($)</option>
+								<option>USD($)</option>
+								<option>EUR($)</option>
+								<option>GBP($)</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="financial-ld-btnradio" id="financial-ld-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="financial-ld-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="financial-ld-btnradio" id="financial-ld-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="financial-ld-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="financial-ld-btnradio" id="financial-ld-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="financial-ld-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="financial-ld-btnradio" id="financial-ld-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="financial-ld-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="financial-ld-btnradio" id="financial-ld-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="financial-ld-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="financial-ld-btnradio" id="financial-ld-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="financial-ld-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">Time (Weeks)</p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="time-weeks-btnradio" id="time-weeks-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="time-weeks-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="time-weeks-btnradio" id="time-weeks-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="time-weeks-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="time-weeks-btnradio" id="time-weeks-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="time-weeks-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="time-weeks-btnradio" id="time-weeks-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="time-weeks-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="time-weeks-btnradio" id="time-weeks-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="time-weeks-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="time-weeks-btnradio" id="time-weeks-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="time-weeks-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">Safety</p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="safety-btnradio" id="safety-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="safety-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="safety-btnradio" id="safety-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="safety-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="safety-btnradio" id="safety-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="safety-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="safety-btnradio" id="safety-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="safety-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="safety-btnradio" id="safety-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="safety-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="safety-btnradio" id="safety-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="safety-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">Environment</p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="environment-btnradio" id="environment-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="environment-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="environment-btnradio" id="environment-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="environment-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="environment-btnradio" id="environment-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="environment-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="environment-btnradio" id="environment-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="environment-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="environment-btnradio" id="environment-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="environment-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="environment-btnradio" id="environment-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="environment-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">Reputation</p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="reputation-btnradio" id="reputation-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="reputation-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="reputation-btnradio" id="reputation-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="reputation-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="reputation-btnradio" id="reputation-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="reputation-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="reputation-btnradio" id="reputation-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="reputation-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="reputation-btnradio" id="reputation-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="reputation-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="reputation-btnradio" id="reputation-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="reputation-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">RegulatoryCompliance</p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="regulatory-compliance-btnradio" id="regulatory-compliance-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="regulatory-compliance-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="regulatory-compliance-btnradio" id="regulatory-compliance-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="regulatory-compliance-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="regulatory-compliance-btnradio" id="regulatory-compliance-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="regulatory-compliance-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="regulatory-compliance-btnradio" id="regulatory-compliance-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="regulatory-compliance-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="regulatory-compliance-btnradio" id="regulatory-compliance-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="regulatory-compliance-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="regulatory-compliance-btnradio" id="regulatory-compliance-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="regulatory-compliance-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">Legal</p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="legal-btnradio" id="legal-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="legal-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="legal-btnradio" id="legal-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="legal-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="legal-btnradio" id="legal-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="legal-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="legal-btnradio" id="legal-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="legal-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="legal-btnradio" id="legal-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="legal-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="legal-btnradio" id="legal-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="legal-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-2">
+			<div class="col-lg-5">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="text-md-end text-start">CSR</p>
+					</div>
+					<div class="col-md-7">
+						<div class="input-group">
+							<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						  	<input type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+					<input type="radio" class="btn-check" name="csr-btnradio" id="csr-btnradio1" autocomplete="off" checked>
+					<label class="btn btn-outline-secondary" for="csr-btnradio1">NIL</label>
+
+					<input type="radio" class="btn-check" name="csr-btnradio" id="csr-btnradio2" autocomplete="off">
+					<label class="btn btn-outline-primary" for="csr-btnradio2">Insignificant</label>
+
+					<input type="radio" class="btn-check" name="csr-btnradio" id="csr-btnradio3" autocomplete="off">
+					<label class="btn btn-outline-info" for="csr-btnradio3">Minor</label>
+
+					<input type="radio" class="btn-check" name="csr-btnradio" id="csr-btnradio4" autocomplete="off">
+					<label class="btn btn-outline-success" for="csr-btnradio4">Medium</label>
+
+					<input type="radio" class="btn-check" name="csr-btnradio" id="csr-btnradio5" autocomplete="off">
+					<label class="btn btn-outline-warning" for="csr-btnradio5">Major</label>
+
+					<input type="radio" class="btn-check" name="csr-btnradio" id="csr-btnradio6" autocomplete="off">
+					<label class="btn btn-outline-danger" for="csr-btnradio6">Catastrophic</label>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+</body>
+</html>

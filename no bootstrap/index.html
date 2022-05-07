@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Current Scoring</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div>
+	<p class="header-title">Pre-Mitigated Scoring</p>
+	<div>
+		<button class="header-btn error">High&nbsp;:&nbsp;25</button>
+		<button class="header-btn grey">Impact History</button>
+	</div>
+	<p class="current-score-txt">Current Scoring</p>
+	<div>
+		<label class="header-label">EMV ($)</label>
+		<input  class="header-input" type="number" value="0" />
+	</div>
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Likelihood:</p>
+			</div>
+			<div class="input-wrap first-row">
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="likelihood" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="likelihood" />
+				<span class="btn-grey">Rare</span>
+			</label>
+			<label>
+				<input type="radio" name="likelihood" />
+				<span class="btn-grey">Unlikely</span>
+			</label>
+			<label>
+				<input type="radio" name="likelihood" />
+				<span class="btn-grey">Possible</span>
+			</label>
+			<label>
+				<input type="radio" name="likelihood" />
+				<span class="btn-grey">Likely</span>
+			</label>
+			<label>
+				<input type="radio" name="likelihood" />
+				<span class="btn-grey">Almost Certain</span>
+			</label>
+		</div>
+	</div>
+
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+			</div>
+			<div class="input-wrap">
+				<span class="min-max">Min</span>
+				<span class="min-max">Expected</span>
+				<span class="min-max">Max</span>
+			</div>
+		</div>
+		<div class="row-right">
+		</div>
+	</div>
+
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Financial-Cost</p>
+				<select>
+					<option>AUD($)</option>
+					<option>USD($)</option>
+					<option>EUR($)</option>
+					<option>GBP($)</option>
+				</select>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="financial-cost" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-cost" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-cost" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-cost" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-cost" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-cost" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Financial-LD</p>
+				<select>
+					<option>AUD($)</option>
+					<option>USD($)</option>
+					<option>EUR($)</option>
+					<option>GBP($)</option>
+				</select>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="financial-ld" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-ld" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-ld" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-ld" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-ld" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="financial-ld" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Time (Weeks)</p>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="time-weeks" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="time-weeks" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="time-weeks" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="time-weeks" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="time-weeks" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="time-weeks" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Safety</p>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="safety" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="safety" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="safety" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="safety" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="safety" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="safety" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Environment</p>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="environment" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="environment" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="environment" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="environment" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="environment" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="environment" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Reputation</p>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="reputation" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="reputation" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="reputation" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="reputation" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="reputation" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="reputation" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>RegulatoryCompliance</p>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="regulatory-compliance" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="regulatory-compliance" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="regulatory-compliance" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="regulatory-compliance" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="regulatory-compliance" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="regulatory-compliance" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>Legal</p>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="legal" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="legal" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="legal" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="legal" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="legal" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="legal" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+	
+	<div class="row-wraper">
+		<div class="row-left">
+			<div class="label-wrap">
+				<p>CSR</p>
+			</div>
+			<div class="input-wrap">
+				<input type="number" />
+				<input type="number" />
+				<input type="number" />
+			</div>
+		</div>
+		<div class="row-right">
+			<label>
+				<input type="radio" name="csr" />
+				<span class="btn-blank">NIL</span>
+			</label>
+			<label>
+				<input type="radio" name="csr" />
+				<span class="btn-success">Insignificant</span>
+			</label>
+			<label>
+				<input type="radio" name="csr" />
+				<span class="btn-green">Minor</span>
+			</label>
+			<label>
+				<input type="radio" name="csr" />
+				<span class="btn-warning">Medium</span>
+			</label>
+			<label>
+				<input type="radio" name="csr" />
+				<span class="btn-orange">Major</span>
+			</label>
+			<label>
+				<input type="radio" name="csr" />
+				<span class="btn-error">Catastrophic</span>
+			</label>
+		</div>
+	</div>
+</div>
+</body>
+</html>

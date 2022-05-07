@@ -1,0 +1,25 @@
+body{
+	background-color: #DDD;
+}
+.header-title{
+	font-size: 26px;
+    margin: 5px;
+    color: #111111;
+}
+.current-score-txt{
+	font-size: 24px;
+    margin: 25px 0 15px;
+    color: #111111;
+}
+.header-label{
+	display: block;
+	font-size: 14px;
+    margin: 0;
+    color: #111111;
+}
+.btn-group, .btn-group-vertical{
+	width: 100%;
+}
+p{
+	margin: 0;
+}
