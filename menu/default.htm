@@ -1,0 +1,519 @@
+<html>
+
+<head>
+    <title>Menu Sample</title>
+    <link rel="stylesheet" href="menu.css">
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+    <div id="MenuArea">
+        <div id="MenuLine">
+            <ul id="ctl00_MainMenuList">
+                <li id="menuHome" class="">Home</li>
+                <li id="menuCustomers" class="">Customers</li>
+                <li id="menuPricing">Pricing &amp; Profit</li>
+                <li id="menuOpportunities">Opportunities</li>
+                <li id="menuTeam">Team</li>
+                <li id="menuComplaints" class="">Complaints</li>
+                <li id="menuReports">Reports</li>
+                <li id="menuAdmin">Data Management</li>
+            </ul>
+        </div>
+        <div id="MenuToolbar" style="display: none;">
+
+            <div id="menuHomePanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Main</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Customer Action Dashboard with your To Do list and pending actions"><svg
+                                    fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#check2-square"></use>
+                                </svg><span>Action Dashboard</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Main Customer page with tab for Sales, Orders, Invoices, Sales Opportunities, Indexation, ..."><svg
+                                    fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#people-fill"></use>
+                                </svg><span>Customers</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Sales Opportunity Dashboard with views on Closing Soon, Recently closed, etc."><svg
+                                    fill="#292" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#currency-euro"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#search"></use>
+                                </svg><span>Opportunity Dashboard</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View all any open complaints with your customers."><svg fill="#922"
+                                    style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#exclamation-triangle-fill"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#search"></use>
+                                </svg><span>Complaints Dashboard</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Access a wide range of Excel Reports on your Customers and Sales"><svg
+                                    fill="#292">
+                                    <use xlink:href="bootstrap-icons.svg#file-earmark-spreadsheet-fill"></use>
+                                </svg><span>Excel Reports</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Sales Dashboard with performance against budget, sales summary, forecast and outstanding Sales Plan tasks"><svg
+                                    fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#bullseye"></use>
+                                </svg><span>Sales Dashboard</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Customer Actions</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Diary view of Customer Actions, view and move actions"><svg fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#calendar-week"></use>
+                                </svg><span>Action Calendar</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Filter and Search Customer Actions in a list"><svg fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#card-checklist"></use>
+                                </svg><span>Customer Actions List</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">more Actions</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" target="_self"
+                                title="View and move Customer Actions using a scheduler showing your team and all planned actions."><svg
+                                    fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#align-start"></use>
+                                </svg><span>Schedule Actions</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Track all recent customer visit reports"><svg fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#door-open-fill"></use>
+                                </svg><span>Visit Reports</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuCustomersPanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Working with Customers</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Main Customer page with tab for Sales, Orders, Invoices, Sales Opportunities, Indexation, ..."><svg
+                                    fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#people-fill"></use>
+                                </svg><span>Customers</span></a><a class="MainEntry"
+                                href="#"
+                                target="_self"
+                                title="Search all Customers across Europe.  Shows details of every known customer including their Account Manager."><svg
+                                    fill="#44f" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#people-fill"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#search"></use>
+                                </svg><span>All Customers</span></a><a class="MainEntry"
+                                href="#"
+                                target="_self"
+                                title="Search all Customers across Europe.  Shows details of every known customer including their Account Manager."><svg
+                                    fill="#44f" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#people-fill"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#search"></use>
+                                </svg><span>Search European Customers</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Four Charts showing overall customer profitability and performance against budget"><svg
+                                    fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#bar-chart-fill"></use>
+                                </svg><span>Charts</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View and manage the BMW LVV prospects, link them to customers and track actions to bring them on board"><svg
+                                    fill="#44f" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#box2"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#check2-square"></use>
+                                </svg><span>LXY-Projekt</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View your customers on a zoomable map."><svg fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#geo-alt"></use>
+                                </svg><span>Maps</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Another Map view of customers"><svg fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#geo-alt"></use>
+                                </svg><span>Quick Map</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Invoices &amp; Orders</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View overdue invoices for your customer, contact the customer to understand why they are late and provide feedback."><svg
+                                    fill="#d33">
+                                    <use xlink:href="bootstrap-icons.svg#alarm"></use>
+                                </svg><span>Overdue Invoices</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View regular customer orders which are later than expected.  Contact the customer to find out if there is a problem."><svg
+                                    fill="#333">
+                                    <use xlink:href="bootstrap-icons.svg#question-lg"></use>
+                                </svg><span>Order Analysis</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Review key customers and set plans and targets for the future"><svg fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#bullseye"></use>
+                                </svg><span>Account Plans</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Tools</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Report showing all Customer Groups and sales performance"><svg fill="#FFA500">
+                                    <use xlink:href="bootstrap-icons.svg#key-fill"></use>
+                                </svg><span>Key Accounts</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Shows all accounts which have been deactivated because of no recent invoices, opportunities or customer actions.  Use to re-activate any account."><svg
+                                    fill="#aaa">
+                                    <use xlink:href="bootstrap-icons.svg#people-fill"></use>
+                                </svg><span>Dormant Accounts</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Add a new prospect"><svg fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#plus-square-fill"></use>
+                                </svg><span>Add Prospect</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Admin</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Set budgets by Market Sector entering expected changes in price and volume for the next year - drives customer budgets"><svg
+                                    fill="#44a" style="height: 13px;margin-left:-6px">
+                                    <use xlink:href="bootstrap-icons.svg#people-fill"></use>
+                                </svg><svg fill="#292" style="height: 10px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#currency-euro"></use>
+                                </svg><span>Budget Planner</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Merge a prospect into a customer to avoid duplicates"><svg fill="#44a">
+                                    <use xlink:href="bootstrap-icons.svg#person-bounding-box"></use>
+                                </svg><span>Match Prospects</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Menu_menuEditSalesBudget_Desc"><svg fill="#292" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#currency-euro"></use>
+                                </svg><svg fill="#444" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#pencil-fill"></use>
+                                </svg><span>Sales Budgets</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuPricingPanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Main</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#"
+                                target="_self"
+                                title="Review price change history for your customers alongside recent price changes.  Check the price changes for all articles."><svg
+                                    fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#activity"></use>
+                                </svg><span>Price Monitor</span></a><a class="MainEntry"
+                                href="#"
+                                target="_self"
+                                title="Create, View and Monitor your plans to improve profitability for specific customer articles"><svg
+                                    fill="#023020">
+                                    <use xlink:href="bootstrap-icons.svg#arrow-up-right-square"></use>
+                                </svg><span>Profit Plans</span></a><a class="MainEntry"
+                                href="#"
+                                target="_self"
+                                title="Explore profit over the last 12 months using an organisation hierarchy (Sales->Sales Team->Sales person)"><svg
+                                    fill="#023020">
+                                    <use xlink:href="bootstrap-icons.svg#search"></use>
+                                </svg><span>Profit Explorer</span></a><a class="MainEntry"
+                                href="#"
+                                target="_self" title="View your customer" s="" recent="" quotes="" and="" record=""
+                                customer="" feedback=""><svg fill="#44f">
+                                    <use xlink:href="bootstrap-icons.svg#chat-quote-fill"></use>
+                                </svg><span>Quote Feedback</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Reports</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" 
+                                target="_self"
+                                title="Additional Profit Reports including: Profitability by Post Code/Region/Country, Profitability by Product Group"><svg
+                                    fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#heart-fill"></use>
+                                </svg><span>Profit Analysis</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Admin</span>
+                        <div class="MenuSectionContent List">
+                            <a class="ListEntry"
+                                href="#" target="_self"
+                                title="Admin Only: Set Profit Targets by Product Group"><svg fill="#023020">
+                                    <use xlink:href="bootstrap-icons.svg#bullseye"></use>
+                                </svg><span>Profit Targets</span>
+                            </a>
+                            <a class="ListEntry"
+                                href="#" 
+                                target="_self" title="Enter the latest material prices (Admin only)"><svg fill="#393">
+                                    <use xlink:href="bootstrap-icons.svg#currency-euro"></use>
+                                </svg><span>Material Index Prices</span>
+                            </a>
+                            <a class="ListEntry"
+                                href="#" 
+                                target="_self"
+                                title="Admin Only: View all customers and any necessary price changes.  Schedule price change actions for Indexed Customers."><svg
+                                    fill="#44a">
+                                    <use xlink:href="bootstrap-icons.svg#people-fill"></use>
+                                </svg><span>Indexation Price Changes</span>
+                            </a>
+                            <a class="ListEntry"
+                                href="#" 
+                                target="_self"
+                                title="Bulk Price Changes.  Enter transport, labour and other price changes to multiple customers and generate price change actions"><svg
+                                    fill="#44a" style="height: 13px;margin-left:-6px">
+                                    <use xlink:href="bootstrap-icons.svg#currency-euro"></use>
+                                </svg><svg fill="#44a" style="height: 10px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#tag-fill"></use>
+                                </svg><span>Manual Price Change</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Dashboard Cost Model</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" 
+                                target="_self" title="Component Costs"><svg fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#tags-fill"></use>
+                                </svg><span>Component Costs</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuOpportunitiesPanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Main</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" 
+                                target="_self"
+                                title="Sales Opportunity Dashboard with views on Closing Soon, Recently closed, etc."><svg
+                                    fill="#292" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#currency-euro"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#search"></use>
+                                </svg><span>Opportunity Dashboard</span></a><a class="MainEntry"
+                                href="#" 
+                                target="_self" title="Search, View and Edit your Sales Opportunities"><svg fill="#292">
+                                    <use xlink:href="bootstrap-icons.svg#pencil"></use>
+                                </svg><span>Edit Opportunities</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="List of opportunities including a link to the detailed opportunity Excel report."><svg
+                                    fill="#292">
+                                    <use xlink:href="bootstrap-icons.svg#eye"></use>
+                                </svg><span>Overview</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Record future loss of business from existing customers (decreases the forecast)"><svg
+                                    fill="#f44">
+                                    <use xlink:href="bootstrap-icons.svg#bag-x-fill"></use>
+                                </svg><span>Lost Business</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Monthly forecast for the end of this financial year (or later)."><svg
+                                    fill="#4a4">
+                                    <use xlink:href="bootstrap-icons.svg#calculator-fill"></use>
+                                </svg><span>Forecast</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Other</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" 
+                                target="_self" title="Set and manage your customer budgets for next year"><svg
+                                    fill="#4a4">
+                                    <use xlink:href="bootstrap-icons.svg#basket2-fill"></use>
+                                </svg><span>Customer Budgets</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="View and Edit Dashboard Projects with budgets, stages, tasks, Gannt and Kanban"><svg
+                                    fill="#a4a">
+                                    <use xlink:href="bootstrap-icons.svg#calendar3-range"></use>
+                                </svg><span>Manage Projects</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuTeamPanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Main</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Summary of your Sales &amp; CS Teams with performance against budget year to date."><svg
+                                    fill="#4aa">
+                                    <use xlink:href="bootstrap-icons.svg#person-check-fill"></use>
+                                </svg><span>Team Performance</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Customer Action Dashboard showing actions for you and your team"><svg fill="#4aa"
+                                    style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#person-fill"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#check2-square"></use>
+                                </svg><span>Team Actions</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Impersonate a colleague (with permission) so you can view their accounts and actions to assist them."><svg
+                                    fill="#4aa">
+                                    <use xlink:href="bootstrap-icons.svg#file-earmark-person-fill"></use>
+                                </svg><span>Impersonate</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Reports</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Shows a summary of your Team and recent usage of the Dashboard so you can identify anyone who needs more training."><svg
+                                    fill="#4aa">
+                                    <use xlink:href="bootstrap-icons.svg#person-lines-fill"></use>
+                                </svg><span>User Access</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuComplaintsPanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Main</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" 
+                                target="_self" title="View all any open complaints with your customers."><svg
+                                    fill="#922" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#exclamation-triangle-fill"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#search"></use>
+                                </svg><span>Complaints Dashboard</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Search, View and Edit Complaints"><svg fill="#922">
+                                    <use xlink:href="bootstrap-icons.svg#pencil"></use>
+                                </svg><span>Edit Complaints</span></a><a class="MainEntry"
+                                href="#" 
+                                target="_self" title="List of all complaints by status"><svg fill="#922">
+                                    <use xlink:href="bootstrap-icons.svg#card-checklist"></use>
+                                </svg><span>Complaint Status</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuReportsPanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Main</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Access a wide range of Excel Reports on your Customers and Sales"><svg
+                                    fill="#292">
+                                    <use xlink:href="bootstrap-icons.svg#file-earmark-spreadsheet-fill"></use>
+                                </svg><span>Excel Reports</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Analysis of Year to Date sales and profitability by country, factory, product group, sales person and customer"><svg
+                                    fill="#4a4">
+                                    <use xlink:href="bootstrap-icons.svg#pie-chart-fill"></use>
+                                </svg><span>Analyse</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Monitor the progress of investment projects against annual targets"><svg
+                                    fill="#999" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#bank2"></use>
+                                </svg><svg fill="#393" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#currency-euro"></use>
+                                </svg><span>Investment Tracker</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Shows a summary of your Team and recent usage of the Dashboard so you can identify anyone who needs more training."><svg
+                                    fill="#4aa">
+                                    <use xlink:href="bootstrap-icons.svg#person-lines-fill"></use>
+                                </svg><span>User Access</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Misc Reports</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Simple Report showing total sales per day for the last three months"><svg
+                                    fill="#292">
+                                    <use xlink:href="bootstrap-icons.svg#graph-up"></use>
+                                </svg><span>Daily Sales</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Administration</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Managed scheduled Excel reports.  Define reports to be emailed to users every day/week/month"><svg
+                                    fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#calendar4-event"></use>
+                                </svg><span>Scheduled Reports</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Edit Excel Report Settings - name, permissions, roles, regions"><svg fill="#292"
+                                    style="height: 13px;margin-left:-6px">
+                                    <use xlink:href="bootstrap-icons.svg#file-earmark-spreadsheet-fill"></use>
+                                </svg><svg fill="#444" style="height: 10px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#pencil-fill"></use>
+                                </svg><span>Report Admin</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuAdminPanel" class="menuPanel" style="display: none;">
+                <div class="MenuPanelContent">
+                    <div class="MenuSection"><span class="SectionTitle">Main</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="AdminAlertMessages.aspx?Title=Data Management > Administration Alerts"
+                                target="_self" title="Enter and manage alerts to Dashboard users"><svg fill="#4a4">
+                                    <use xlink:href="bootstrap-icons.svg#info-square-fill"></use>
+                                </svg><span>Administration Alerts</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View current and completed change requests."><svg fill="#494">
+                                    <use xlink:href="bootstrap-icons.svg#envelope-plus-fill"></use>
+                                </svg><span>Change Requests</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View current support requests"><svg fill="#f4c1c1">
+                                    <use xlink:href="bootstrap-icons.svg#bandaid-fill"></use>
+                                </svg><span>Support Requests</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Edit and manager the list choices"><svg fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#menu-button-fill"></use>
+                                </svg><span>Manage Lists</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="Admin Only: Edit screen labels in your local language"><svg fill="#449">
+                                    <use xlink:href="bootstrap-icons.svg#chat-left-text"></use>
+                                </svg><span>Translations</span></a><a class="MainEntry"
+                                href="#" target="_self"
+                                title="View, Edit and Add Dashboard Users, change roles and security settings, reset passwords"><svg
+                                    fill="#449" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#person-rolodex"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#pencil"></use>
+                                </svg><span>Users &amp; Roles</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">International</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Edit Group Dashboard sites"><svg fill="#449">
+                                    <use xlink:href="bootstrap-icons.svg#building"></use>
+                                </svg><span>Sites</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Edit Group Dashboard Regions"><svg fill="#449">
+                                    <use xlink:href="bootstrap-icons.svg#globe"></use>
+                                </svg><span>Regions</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Manage Currency exchange rates"><svg fill="#494">
+                                    <use xlink:href="bootstrap-icons.svg#currency-exchange"></use>
+                                </svg><span>Currency</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Misc</span>
+                        <div class="MenuSectionContent List"><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Edit Teams and Team Managers per region"><svg fill="#449">
+                                    <use xlink:href="bootstrap-icons.svg#people"></use>
+                                </svg><span>Manage Teams</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Create and manage Customer Groups and assign key account managers for each group"><svg
+                                    fill="#444">
+                                    <use xlink:href="bootstrap-icons.svg#collection"></use>
+                                </svg><span>Customer Groups</span></a><a class="ListEntry"
+                                href="#" 
+                                target="_self"
+                                title="View details administration logs of the daily sales data imports and any issues"><svg
+                                    fill="#999">
+                                    <use xlink:href="bootstrap-icons.svg#file-earmark-arrow-down-fill"></use>
+                                </svg><span>Data Integration Logs</span></a><a class="ListEntry"
+                                href="#" target="_self"
+                                title="Admin Only: Edit Menus and menu security"><svg fill="#919">
+                                    <use xlink:href="bootstrap-icons.svg#list"></use>
+                                </svg><span>Edit Menus</span></a><a class="ListEntry"
+                                href="ExternalWarehouses.aspx?Title=Data Management > Edit External Warehouses"
+                                target="_self" title="Edit External Resources such as warehouses"><svg fill="#811">
+                                    <use xlink:href="bootstrap-icons.svg#geo"></use>
+                                </svg><span>Edit External Warehouses</span></a></div>
+                    </div>
+                    <div class="MenuSection"><span class="SectionTitle">Workflow</span>
+                        <div class="MenuSectionContent"><a class="MainEntry"
+                                href="#" 
+                                target="_self" title="Workflow Security Rules"><svg fill="#aa5" style="height: 25px">
+                                    <use xlink:href="bootstrap-icons.svg#arrow-left-right"></use>
+                                </svg><svg fill="#333" style="height: 20px" class="Over">
+                                    <use xlink:href="bootstrap-icons.svg#lock-fill"></use>
+                                </svg><span>Customer Action Rules</span></a><a class="MainEntry"
+                                href="#" 
+                                target="_self" title="Admin Only: Edit Customer Action Workflows (training needed)"><svg
+                                    fill="#aa5">
+                                    <use xlink:href="bootstrap-icons.svg#arrow-left-right"></use>
+                                </svg><span>WorkFlow Editor</span></a></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+            <script type="text/javascript" src="menu.js"></script>
+</body>
+
+</html>
